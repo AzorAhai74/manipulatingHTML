@@ -23,7 +23,36 @@ window.addEventListener('DOMContentLoaded', function() {
         e.target.style.backgroundColor = '';
     });
 
-    
+    let para = document.createElement('p');
+    para.className = 'para1';
+    let para1 = document.getElementsByClassName('p');
+    para.class = para1;
+    para.id = 'paraOne';
+    let paraText = document.createTextNode('This is a paragraph');
+    para.appendChild(paraText);
+    document.body.appendChild(para);
+
+    document.getElementById('paraOne').addEventListener('click', function(e) {
+        e.target.style.color = 'red';
+    });
+
+    let colors = ['blue', 'yellow', 'green', 'purple', 'pink'];
+
+    function randomColors() {
+        let randomColor1 = colors[Math.floor(Math.random() * 4) + 1];
+        let randomColor2 = colors[Math.floor(Math.random() * 4) + 1];
+        let randomColor3 = colors[Math.floor(Math.random() * 4) + 1];
+        let randomColor4 = colors[Math.floor(Math.random() * 4) + 1];
+        let randomColor5 = colors[Math.floor(Math.random() * 4) + 1];
+
+        randomColors = '(' + randomColor1 + ',' + randomColor2 + ',' + randomColor3 + ',' + randomColor3 + ',' + randomColor4 + ',' + randomColor5 +')';
+        console.log(randomColors);
+
+    }
+
+    document.getElementById('paraOne').addEventListener('click', function(e) {
+        e.target.style = randomColors();
+    });
 
 });
 
