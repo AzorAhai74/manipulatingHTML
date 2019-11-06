@@ -18,8 +18,27 @@ window.addEventListener('DOMContentLoaded', function() {
     div.className = 'div1';
     let divOne = document.getElementsByClassName('div');
     div.class = divOne;
+    let h2 = document.createElement('h2');
+    h2.className = 'header2';
+    let header2 = document.getElementsByClassName('h2');
+    h2.class = header2;
+    let h2Text = document.createTextNode('This should change color when the mouse hovers over');
+    h2.appendChild(h2Text);
+    div.appendChild(h2);
     document.body.appendChild(div);
+
+    
+    div.addEventListener('mouseover', function() {
+        div.style.backgroundcolor = 'green';
+    });
+    
+
+    
+
+
+
 
     document.body.appendChild(btn);
 
 });
+
