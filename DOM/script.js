@@ -32,9 +32,6 @@ window.addEventListener('DOMContentLoaded', function() {
     para.appendChild(paraText);
     document.body.appendChild(para);
 
-    document.getElementById('paraOne').addEventListener('click', function(e) {
-        e.target.style.color = 'red';
-    });
 
     let colors = ['blue', 'yellow', 'green', 'purple', 'pink'];
 
@@ -47,11 +44,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
         randomColors = '(' + randomColor1 + ',' + randomColor2 + ',' + randomColor3 + ',' + randomColor3 + ',' + randomColor4 + ',' + randomColor5 +')';
         console.log(randomColors);
+        return randomColors;
 
     }
 
     document.getElementById('paraOne').addEventListener('click', function(e) {
-        e.target.style = randomColors();
+        e.target.style.color = randomColors();
     });
 
 });
