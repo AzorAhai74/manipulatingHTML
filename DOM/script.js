@@ -44,66 +44,34 @@ window.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(divContainer);
     });
 
-    let friends = ['Liz', 'Bo', 'Fain', 'Alan', 'Jacob', 'John', 'Margie', 'Katherine', 'Jim', 'Joe'];
+    let friends = [
+        { name: 'Liz'},
+        { name: 'Bo'},
+        { name: 'Fain'},
+        { name: 'Alan'},
+        { name: 'Jacob'},
+        { name: 'John'},
+        { name: 'Margie'},
+        { name: 'Katherine'},
+        { name: 'Jim'},
+        { name: 'Joe'}
+    ];
 
 
     document.getElementById('btn4').addEventListener('click', function() {
-        let unorderedList = document.createElement('ul');
-        
-        let listFriendLiz = document.createElement('li');
-        let listFriendLizText = document.createTextNode('Liz');
-        listFriendLiz.appendChild(listFriendLizText);
-        unorderedList.appendChild(listFriendLiz);
+        let i;
 
-        let listFriendBo = document.createElement('li');
-        let listFriendBoText = document.createTextNode('Bo');
-        listFriendBo.appendChild(listFriendBoText);
-        unorderedList.appendChild(listFriendBo);
+        for (i = 0; i < friends.length; i++) {
+            let f = friends[i].name;
 
-        let listFriendFain = document.createElement('li');
-        let listFriendFainText = document.createTextNode('Fain');
-        listFriendFain.appendChild(listFriendFainText);
-        unorderedList.appendChild(listFriendFain);
+            let list = document.createElement('li');
 
-        let listFriendAlan = document.createElement('li');
-        let listFriendAlanText = document.createTextNode('Alan');
-        listFriendAlan.appendChild(listFriendAlanText);
-        unorderedList.appendChild(listFriendAlan);
+            let listText = document.createTextNode(f);
+            list.appendChild(listText);
 
-        let listFriendJacob = document.createElement('li');
-        let listFriendJacobText = document.createTextNode('Jacob');
-        listFriendJacob.appendChild(listFriendJacobText);
-        unorderedList.appendChild(listFriendJacob);
-
-        let listFriendJohn = document.createElement('li');
-        let listFriendJohnText = document.createTextNode('John');
-        listFriendJohn.appendChild(listFriendJohnText);
-        unorderedList.appendChild(listFriendJohn);
-
-        let listFriendMargie = document.createElement('li');
-        let listFriendMargieText = document.createTextNode('Margie');
-        listFriendMargie.appendChild(listFriendMargieText);
-        unorderedList.appendChild(listFriendMargie);
-
-        let listFriendKatherine = document.createElement('li');
-        let listFriendKatherineText = document.createTextNode('Katherine');
-        listFriendKatherine.appendChild(listFriendKatherineText);
-        unorderedList.appendChild(listFriendKatherine);
-
-        let listFriendJim = document.createElement('li');
-        let listFriendJimText = document.createTextNode('Jim');
-        listFriendJim.appendChild(listFriendJimText);
-        unorderedList.appendChild(listFriendJim);
-
-        let listFriendJoe = document.createElement('li');
-        let listFriendJoeText = document.createTextNode('Joe');
-        listFriendJoe.appendChild(listFriendJoeText);
-        unorderedList.appendChild(listFriendJoe);
-
-        document.body.append(unorderedList);
-
-        
-    })
+            document.getElementById('list').appendChild(list);
+        }
+    });
 
 
 });
