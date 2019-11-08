@@ -15,15 +15,13 @@ window.addEventListener('DOMContentLoaded', function() {
         alert(document.getElementById('message').value);
     });
 
-    document.getElementById('message').addEventListener('mouseover', function(e) {
+    document.getElementById('message1').addEventListener('mouseover', function(e) {
         e.target.style.backgroundColor = 'yellow';
     });
 
-    document.getElementById('message').addEventListener('mouseout', function(e) {
+    document.getElementById('message1').addEventListener('mouseout', function(e) {
         e.target.style.backgroundColor = '';
     });
-
-
 
     function randomColor() {
         let r = Math.floor(Math.random() * 256);
@@ -33,12 +31,20 @@ window.addEventListener('DOMContentLoaded', function() {
         return color;
     }
 
-
-    
-
     document.getElementById('paraOne').addEventListener('click', function(e) {
         e.target.style.color = randomColor();
     });
+
+    document.getElementById('btn3').addEventListener('click', function() {
+        let divContainer = document.createElement('div');
+        let span = document.createElement('span');
+        let spanText = document.createTextNode('Byron Baldwin');
+        span.appendChild(spanText);
+        divContainer.appendChild(span);
+        document.body.appendChild(divContainer);
+    
+    });
+
 
 });
 
