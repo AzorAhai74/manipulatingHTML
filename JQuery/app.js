@@ -13,6 +13,16 @@ $(document).ready(function() {
         }
         $('input').change(alertValue);
         alert($(':input[type="text"]').val());
+        $("form").trigger("reset");
     });
-    
+    $('div').on('mouseover', function() {
+        $(this).css({
+            'background-color': 'yellow'
+        });
+    });
+    $('div').on('mouseout', function() {
+        $(this).css({
+            'background-color': ''
+        });
+    });
 });
