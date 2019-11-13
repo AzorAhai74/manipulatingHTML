@@ -1,10 +1,11 @@
 $(document).ready(function() {
     let $button1 = $("<button></button>");
-    let submitBtn1 = $("#submitBtn1");
     let $btn1Text = 'Click Here';
+    
+    $($button1).append($btn1Text);
     $('body').append($button1);
-    $(submitBtn1).click(function() {
-        alert($('Hello, how are you?').val());
+    $($button1).click(function() {
+        alert('Hey how are you?');
     });
     
 });
