@@ -7,5 +7,12 @@ $(document).ready(function() {
     $($button1).click(function() {
         alert('Hey how are you?');
     });
+    $('#btn2').click(function() {
+        function alertValue() {
+            alert($('input').val());
+        }
+        $('input').change(alertValue);
+        alert($(':input[type="text"]').val());
+    });
     
 });
