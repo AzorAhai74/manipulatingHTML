@@ -45,5 +45,16 @@ $(document).ready(function() {
         e.target.style.color = randomColor();
     });
 
+    let b = $('#btn3');
+
+    $(b).click(function() {
+        let $divContainer = $('<div></div>');
+        let $span = $('<span></span>');
+        let $spanText = 'Byron Baldwin';
+        $span.append($spanText);
+        $divContainer.append($span);
+        $('body').append($divContainer);
+    });
+
      
 });
